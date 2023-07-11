@@ -6,9 +6,9 @@ import "./detail.scss";
 import { MyImage } from "../../../Components/LazyLoadImage/Image";
 import { useSelector } from "react-redux";
 import ContentWrapper from "../../../Components/contentWrapper/ContentWrapper";
-import useFetch from "../../../Hooks/useFetch";
+import UseFetch from "../../../hooks/useFetch";
 import NoPoster from "../../../assets/no-poster.png";
-import Genres from "../../../Components/Genres/Genres";
+import Genres from "../../../Components/genres/Genres";
 import CircleRating from "../../../Components/circleRating/CircleRating";
 import { PlayIcon } from "../PlayButton";
 import VideoPopup from "../../../Components/videoPop/VideoPop";
@@ -18,7 +18,7 @@ const DetailsBanner = ({ video, crew }) => {
   const [videoId, setVideoId] = useState(null);
   const { mediaType, id } = useParams();
   const { url } = useSelector((state) => state.home);
-  const { data, loading } = useFetch(`/${mediaType}/${id}`);
+  const { data, loading } = UseFetch(`/${mediaType}/${id}`);
   const toHoursAndMinutes = (totalMinutes) => {
     const hours = Math.floor(totalMinutes / 60);
     const minutes = totalMinutes % 60;

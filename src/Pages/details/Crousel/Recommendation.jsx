@@ -5,10 +5,10 @@
 import React from "react";
 
 import Crousel from "../../../Components/Crousel/Crousel";
-import useFetch from "../../../Hooks/useFetch";
+import UseFetch from "../../../hooks/useFetch";
 
 const Recommendation = ({ mediaType, id }) => {
-    const { data, loading, error } = useFetch(
+    const { data, loading, error } = UseFetch(
         `/${mediaType}/${id}/recommendations`
     );
 

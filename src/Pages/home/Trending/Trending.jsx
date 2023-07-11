@@ -3,11 +3,11 @@ import SwitchTabs from "../../../Components/SwitchTabs/SwitchTabs";
 import Crousel from "../../../Components/Crousel/Crousel";
 
 import { useState } from "react";
-import useFetch from "../../../hooks/useFetch";
+import UseFetch from "../../../hooks/useFetch";
 
 const Trending = () => {
   const [endpoint, setEndpoint] = useState("day");
-  const { data, loading } = useFetch(`/trending/all/${endpoint}`);
+  const { data, loading } = UseFetch(`/trending/all/${endpoint}`);
 
   const onTabChange = (tab, index) => {
     setEndpoint(tab === "Day" ? "day" : "week");

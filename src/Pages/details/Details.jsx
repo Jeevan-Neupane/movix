@@ -1,4 +1,4 @@
-import useFetch from "../../Hooks/useFetch";
+import UseFetch from "../../hooks/useFetch";
 import "./styleDetail.scss";
 import Cast from "../../Components/Cast/Cast";
 import VideosSection from "./videosSection/VideosSection";
@@ -11,8 +11,8 @@ import Recommendation from "./Crousel/Recommendation";
 function Details() {
   const { mediaType, id } = useParams();
 
-  const { data, loading } = useFetch(`/${mediaType}/${id}/videos`);
-  const { data: credits, loading: creditsLoading } = useFetch(
+  const { data, loading } = UseFetch(`/${mediaType}/${id}/videos`);
+  const { data: credits, loading: creditsLoading } = UseFetch(
     `/${mediaType}/${id}/credits`
   );
 

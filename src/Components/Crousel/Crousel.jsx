@@ -11,8 +11,7 @@ import ContentWrapper from "../contentWrapper/ContentWrapper";
 import { MyImage } from "../LazyLoadImage/Image";
 import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circleRating/CircleRating";
-import Genres from "../Genres/Genres";
-
+import Genres from "../genres/Genres";
 import "./crousel.scss";
 
 function Crousel({ data, loading, endpoint,title }) {
