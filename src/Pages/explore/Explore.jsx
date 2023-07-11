@@ -4,7 +4,6 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Select from "react-select";
 
 import "./styleExplore.scss";
-
 import useFetch from "../../hooks/useFetch";
 import { fetchDataFromApi } from "../../utils/api";
 import ContentWrapper from "../../Components/contentWrapper/ContentWrapper";
